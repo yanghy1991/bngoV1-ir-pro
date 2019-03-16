@@ -1,0 +1,50 @@
+---- src Matches (56 in 6 files) ----
+delete_code_list in all_handler.c : 		char *src = strstr(line_pre_str,"\n");
+delete_code_list in all_handler.c : 		if(src != NULL)
+delete_code_list in all_handler.c : 			src[0] = '\0';
+match_handler_func in all_handler.c : 		char src[10] = {0};
+match_handler_func in all_handler.c : 				strcpy(src,token);
+match_handler_func in all_handler.c : 		//printf("t:%d bid:%s number:%d  src:%s ########\n",atoi(t),bid,atoi(number),src);
+match_handler_func in all_handler.c : 					if(send_Match_code(atoi(t),atoi(number),src,sds_results_msg) !=0)
+match_handler_func in all_handler.c : 					if(send_Match_code(atoi(t),atoi(number),src,sds_results_msg) !=0)
+match_handler_func in all_handler.c : 				if(send_Match_code(atoi(t),atoi(number),src,sds_results_msg) !=0)
+akeymatch_handler_func in all_handler.c : 	char src[10] = {0};
+akeymatch_handler_func in all_handler.c : 			strcpy(src,token);
+akeymatch_handler_func in all_handler.c : 	//printf("t:%d bid:%s  src:%s ########\n",atoi(t),bid,src);
+akeymatch_handler_func in all_handler.c : 	ret = ont_key_match(bid,t,src);
+cacertinmem.c line 495 : int ont_key_match(char *bid,char *t,char *src)
+ont_key_match in cacertinmem.c : 	//将match_learn_src src  进行urlencode 编码
+ont_key_match in cacertinmem.c : 	URLEncode(src, strlen(src), src_encode, 50);
+ont_key_match in cacertinmem.c : 	sprintf(strMD5,"%s%s%s%s%s%s","none",secret_key,match_learn_src,t,bid,src);
+ont_key_match in cacertinmem.c : 	//sprintf(info,"###%s%s%s###",bid,t,src);
+send_Match_code in cacertinmem.c : 	char src[1024] ={0};
+send_Match_code in cacertinmem.c : 	int re_num = asr_mcode_json(result_json,&sm,rid,&v,name,&zip,src,number,key,sds_results_msg);
+send_Match_code in cacertinmem.c : 	sprintf(data,"%s%d%s","0",zip,src);
+get_Complete_code in cacertinmem.c : 	char src[1024] ={0};
+get_Complete_code in cacertinmem.c : 	int re_num = asr_mcode_json(result_json,&sm,rid,&v,name,&zip,src,number,match_key,sds_results_msg);
+get_amatch_Complete_code in cacertinmem.c : 	char src[SRC_SIZE] ={0};
+get_amatch_Complete_code in cacertinmem.c : 	int re_num = asr_mcode_json(result_json,&sm,rid,&v,name,&zip,src,number,amatch_key,sds_results_msg);
+get_amatch_Complete_code in cacertinmem.c : 	//printf("#################sm:%d ,rid:%s ,zip:%d ,src:%s \n",sm,rid,zip,src);
+send_Complete_code in cacertinmem.c : 	char src[SRC_SIZE] ={0};
+send_Complete_code in cacertinmem.c : 	int re_num = asr_complete_json(result_json,rid,name,&zip,src,rub_src2);
+send_Complete_code in cacertinmem.c : 	//printf("rid:%s ,name:%s ,zip:%d ,src:%s \n",rid,name,zip,src);
+send_Complete_code in cacertinmem.c : 	sprintf(data,"%s%d%s","0",zip,src);
+send_Complete_code_other in cacertinmem.c : 	char src[SRC_SIZE] ={0};
+send_Complete_code_other in cacertinmem.c : 	int re_num = asr_complete_json(result_json,rid,name,&zip,src,key);
+send_Complete_code_other in cacertinmem.c : 	//printf("rid:%s ,name:%s ,zip:%d ,src:%s \n",rid,name,zip,src);
+send_Complete_code_other in cacertinmem.c : 	sprintf(data,"%s%d%s","0",zip,src);
+cacertinmem.h line 93 : int ont_key_match(char *bid,char *t,char *src);
+https_result.c line 134 : int asr_mcode_json(char *json_str,int *sm,char *rid,int *v,char *name,int *zip,char *src,int n,char *key,result_to_mozart_t *sds_results_msg)
+asr_mcode_json in https_result.c : 	c_src = cJSON_GetObjectItem(c_key,"src");
+asr_mcode_json in https_result.c : 	memcpy(src,c_src->valuestring,strlen(c_src->valuestring)+1);
+https_result.c line 288 : *src:发送的码库数据
+https_result.c line 291 : int asr_complete_json(char *json_str,char *rid,char *name,int *zip,char *src,char *key)
+asr_complete_json in https_result.c : 	c_src = cJSON_GetObjectItem(c_key,"src");
+asr_complete_json in https_result.c : 	memcpy(src,c_src->valuestring,strlen(c_src->valuestring)+1);
+https_result.h line 58 : int asr_mcode_json(char *json_str,int *sm,char *rid,int *v,char *name,int *zip,char *src,int n,char *k,result_to_mozart_t *sds_results_msg);
+https_result.h line 67 : *src:发送的码库数据
+https_result.h line 71 : int asr_complete_json(char *json_str,char *rid,char *name,int *zip,char *src,char *key);
+URLEncode.c line 61 :     char* src = argv[1];
+URLEncode.c line 62 :     unsigned int srclength = strlen(src);
+URLEncode.c line 63 :     printf("src length: %d\n", strlen(src));
+URLEncode.c line 67 :     URLEncode(src, srclength, obj, 100);
